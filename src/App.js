@@ -1,16 +1,17 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function JumbotronComponent(props) {
+import JumbotronComponent from './JumbotronComponent';
 
+function App() {
   return (
     <div>
-        <Jumbotron>
-            <h1>Hello, world!</h1>            
-            <p>{props.children}</p>
-            <p><Button variant="primary">Learn more</Button></p>
-        </Jumbotron>                                                                                                                                 
+        <JumbotronComponent>        
+          This is a long sentence, and I want to insert content into the 
+          jumbotron component from the outside.
+        </JumbotronComponent>   
+
     </div>
   );
 }
-export default JumbotronComponent;
+export default App;
