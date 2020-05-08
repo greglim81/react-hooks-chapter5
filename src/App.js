@@ -1,15 +1,16 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Jumbotron, Button } from 'react-bootstrap';
 
-import Products from './Products';
-
-function App() {
+function JumbotronComponent(props) {
 
   return (
     <div>
-        <Products />   
+        <Jumbotron>
+            <h1>Hello, world!</h1>            
+            <p>{props.children}</p>
+            <p><Button variant="primary">Learn more</Button></p>
+        </Jumbotron>                                                                                                                                 
     </div>
   );
 }
-
-export default App;
+export default JumbotronComponent;
